@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import 'bootstrap/dist/css/bootstrap.css'
+import { BrowserRouter } from "react-router-dom";
+import Header from "./components/Header.jsx";
+import ProjectTitle from "./components/ProjectTitle.jsx";
+import ProjectSlideShow from "./components/ProjectSlideShow.jsx"
+// import {fas , faBars} from '@fortawesome/free-brands-svg-icons'
 
+// import "react-bootstrap/dist/react-bootstrap.min.js";
 function App() {
+  const slides = [
+    {
+        url : './user_pipeline.jpg',
+        title : "User Pipeline"
+    }, 
+    {
+        url : './transaction_pipeline.jpg',
+        title : "Transaction Pipeline"
+    },
+    {
+        url : './refund_pipeline.jpg',
+        title : "Refund Pipeline"
+    },{
+        url : './all_pipeline_processing.jpg',
+        title : "Parallel Processing"
+
+    },{
+        url : './all_tables.jpg',
+        title : "Databset"
+    },{
+        url : './user_table_data.jpg',
+        title : "User Table"
+    },{
+        url : './user_summary_table.jpg',
+        title : "User Summary Table"
+    }
+]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <div className="app">
+      <Header />
+      <ProjectTitle />
+      <div className="container">
+        <ProjectSlideShow slides = {slides}/>
+      </div>
+   </div>
+   </BrowserRouter>
   );
+  
 }
 
 export default App;
