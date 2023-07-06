@@ -4,6 +4,9 @@ import { BrowserRouter } from "react-router-dom";
 import Header from "./components/Header.jsx";
 import ProjectTitle from "./components/ProjectTitle.jsx";
 import ProjectSlideShow from "./components/ProjectSlideShow.jsx"
+import ProjectData from "./components/ProjectData.jsx";
+import ProjectReadMe from "./components/ProjectReadMe.jsx"
+import Footer from "./components/Footer.jsx";
 // import {fas , faBars} from '@fortawesome/free-brands-svg-icons'
 
 // import "react-bootstrap/dist/react-bootstrap.min.js";
@@ -44,7 +47,10 @@ function App() {
       <div className="container">
         <ProjectSlideShow slides = {slides}/>
       </div>
-   </div>
+      <ProjectData/>
+      <ProjectReadMe />
+      <Footer/>  
+    </div>
    </BrowserRouter>
   );
   

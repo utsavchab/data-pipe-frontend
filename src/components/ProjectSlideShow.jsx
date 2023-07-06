@@ -9,6 +9,9 @@ function ProjectSlideShow ({slides}){
     const sliderStyles = {
         height : "100%",
         position : "relative",
+        minWidth : "100%",
+        maxWidth : "100%",
+        
     }
     const slideStyles = {
         maxWidth : "100%",

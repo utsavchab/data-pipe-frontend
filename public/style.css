@@ -10,6 +10,11 @@ body, html{
     width: 100%;
     
 }
+#root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 a{
     text-decoration: none !important;
@@ -29,10 +34,10 @@ a:hover{
     align-items: center;
     position: fixed;
     top : 0px;
+    left: 0px;
     z-index: 20;
 
 }
-
 .name{
     /* border: red solid 2px; */
     height: 50%;
@@ -51,6 +56,13 @@ a:hover{
     justify-content: start;
     align-items: center;
 
+}
+
+.name a{
+    color: #fff !important;
+    margin: 0 !important;
+    font-weight: 400 !important;
+    font-family: 'Ysabeau SC', sans-serif !important;
 }
 ul,li{
     list-style: none;
@@ -174,30 +186,146 @@ ul,li{
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: 0.3s;
+    margin-bottom: 50px;
 }
 .title-button:hover{
     background-color: #27b671;
 }
 .app{
     /* border : red solid 2px; */
-    width : 100%;
-    min-width: fit-content;
+    /* width : 100%; */
+    /* min-width: fit-content; */
     min-height: fit-content;
     /* display: flex;
     flex- ; */
+    /* border: red solid 2px; */
+    width : 100%;
+    max-width : 1400px;
 }
 .container{
+    margin:0px;
     margin-top: 30px;
-    width : 100%;
+    min-width : 100%;
+    max-width: 100%;
     height: 600px;
     max-height: 80vh;
     user-select: none;
-
-
+    
 }
 
+.project-data{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    /* margin: 0 auto;  */
+    margin-top: 100px;
+    margin-bottom: 70px;
+    column-gap: 20px;
 
+}
+.project-desc{
+    width: 75%;
+    margin-left: 10px;
+    /* border: red solid 2px; */
+}
+
+.project-desc  h1{
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.project-info{
+    max-width: 25%;
+    margin-right: 10px;
+    width: fit-content;
+    /* border: red solid 2px; */
+}
+.project-info-data{
+    font-size: 17px;
+}
+
+.info-list > p:first-child{
+    margin: 0px;
+    margin-top: 20px;
+    color: rgba(151, 151, 151, 0.808);
+    /* margin-bottom: 0px; */
+}
+
+.read-me{
+    
+    background-color: white;
+    color: black;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 30px;
+    /* background: none; */
+}
+.read-me h1,h2,h3,h4,h5,h6,p,ul,strong,a,code,li,ol{
+    background: none;
+}
+.read-me h1,.read-me h2,.read-me h3{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.read-me h4{
+    margin-top: 20px;
+}
+.read-me ol,li{
+    list-style: decimal;
+    color: black;
+}
+.read-me img{
+    /* object-fit: cover; */
+    max-width: 100%;
+    min-height: 100%;
+    /* background: none; */
+}
+.read-me hr{
+    color: #000000;
+    border: #000000 solid 2px;
+    font-weight: 900;
+}
+
+.footer hr{
+    color: white;
+    border: white solid 2px;
+    
+}
+.footer{
+    position: absolute;
+    left:0px;
+    right: 0px;
+    margin-top: 40px;
+}
+.footer-content{
+
+    background-color: #000000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; 
+}
 @media only screen and ((width <= 380px)){
+    .project-data{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: fit-content;
+    }
+    .project-data div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-width: fit-content;
+    }
+    .project-data div:nth-child(2){
+        margin-bottom: 30px;
+    }
     .container{
         max-height: 30vh;
     }
@@ -232,6 +360,22 @@ ul,li{
 
 
 @media only screen and ((width <= 500px)){
+    .project-data{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: fit-content;
+    }
+    .project-data div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-width: fit-content;
+    }
+    .project-data div:nth-child(2){
+        margin-bottom: 30px;
+    }
     .container{
         max-height: 50vh;
     }
@@ -264,6 +408,14 @@ ul,li{
 }
 
 @media only screen and ((width <= 900px) and (width > 500px)){
+    .project-desc  h1{
+        font-size: 35px;
+        margin-bottom: 50px;
+    }
+    .project-desc  h2{
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
     .container{
         max-height: 60vh;
     }

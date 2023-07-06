@@ -9,7 +9,7 @@ function Header() {
 
     return(
         <div className="header">
-            <div className="name"><span className="f-name"> <span style={{color:"#27a769"}}>U</span>tsav</span>&nbsp;<span className="s-name"><span style={{color:"#27a769"}}>C</span>habhadiya</span></div>
+            <div className="name"><a href="/"><span className="f-name"> <span style={{color:"#27a769"}}>U</span>tsav</span>&nbsp;<span className="s-name"><span style={{color:"#27a769"}}>C</span>habhadiya</span></a></div>
             <div className="nav">
                 <nav>
                     <ul>
